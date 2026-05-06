@@ -43,7 +43,7 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="py-24 scroll-mt-24">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-6 rounded-2xl bg-card/50 border border-border"
+              className="p-6 rounded-2xl bg-card/60 border border-border hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
             >
               <h3 className="text-xl font-semibold mb-6 border-b border-border pb-4">{category.title}</h3>
               <div className="grid grid-cols-2 gap-4">

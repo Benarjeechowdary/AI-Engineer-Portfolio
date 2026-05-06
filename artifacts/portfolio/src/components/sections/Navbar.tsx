@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Moon, Sun, Menu, X } from "lucide-react";
-import { useTheme } from "@/hooks/use-theme";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -14,7 +13,6 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,15 +28,18 @@ export function Navbar() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent"
+          ? "bg-background/92 backdrop-blur-md border-b border-border shadow-sm"
+          : "bg-background/35 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-tighter">
-          <span className="text-primary">&lt;</span>
-          JS
-          <span className="text-primary">/&gt;</span>
+        <a href="#" className="flex flex-col leading-tight">
+          <span className="text-sm md:text-base font-semibold tracking-wide">
+            Benarjee Chowdary
+          </span>
+          <span className="text-[11px] md:text-xs text-muted-foreground">
+            AI/ML Engineer
+          </span>
         </a>
 
         {/* Desktop Nav */}
@@ -47,30 +48,21 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-semibold text-foreground/90 hover:text-foreground transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-secondary transition-colors"
-            aria-label="Toggle theme"
-            data-testid="button-theme-toggle"
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center h-9 px-4 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
           >
-            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+            Hire Me
+          </a>
         </div>
 
         {/* Mobile Toggle */}
-        <div className="md:hidden flex items-center gap-4">
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-secondary transition-colors"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+        <div className="md:hidden flex items-center gap-2">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 -mr-2"
@@ -95,7 +87,7 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-lg font-medium text-foreground"
+                className="text-lg font-semibold text-foreground/95"
               >
                 {link.name}
               </a>

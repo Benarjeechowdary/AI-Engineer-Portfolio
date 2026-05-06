@@ -9,7 +9,7 @@ import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,theme(colors.primary/8),transparent_38%)]">
       <Navbar />
       <Hero />
       <About />

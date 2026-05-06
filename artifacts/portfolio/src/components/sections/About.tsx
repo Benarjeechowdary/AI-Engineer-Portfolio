@@ -10,7 +10,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-secondary/30 relative">
+    <section id="about" className="py-24 bg-secondary/30 relative scroll-mt-24">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,10 +21,10 @@ export function About() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">About Me</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            I am passionate about artificial intelligence, machine learning, and backend development. 
-            I build intelligent systems ranging from RAG pipelines to predictive ML models. 
-            I love working at the intersection of academic research and real-world engineering impact, 
-            crafting solutions that are both theoretically sound and highly practical.
+            I build AI systems with a product mindset: define the problem clearly, pick the right
+            model and architecture, and deliver dependable user-facing outcomes. My work spans
+            retrieval-augmented generation, predictive modeling, and backend services that make ML
+            solutions production-ready.
           </p>
         </motion.div>
 
@@ -36,7 +36,7 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-6 rounded-2xl bg-card border border-border flex flex-col items-center text-center hover:border-primary/50 transition-colors group"
+              className="p-6 rounded-2xl bg-card border border-border flex flex-col items-center text-center hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group"
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                 {stat.icon}

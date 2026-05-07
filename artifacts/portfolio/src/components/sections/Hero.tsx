@@ -118,7 +118,7 @@ export function Hero() {
         >
           <div className="absolute -inset-2 rounded-3xl bg-white/5 blur-2xl" />
           <img
-            src="/ai-hero.svg"
+            src="/AI-Engineer-Portfolio/ai-hero.svg"
             alt="AI systems visualization"
             className="relative w-full rounded-3xl border border-border shadow-2xl shadow-black/60"
           />

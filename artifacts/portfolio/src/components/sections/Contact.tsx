@@ -47,11 +47,11 @@ export function Contact() {
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                 <Linkedin size={20} />
               </div>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <p className="text-sm font-medium text-muted-foreground">
                   LinkedIn
                 </p>
-                <p className="text-foreground font-semibold truncate max-w-full">
+                <p className="text-foreground font-semibold break-all">
                   linkedin.com/in/benarjee-chowdary-nalluri
                 </p>
               </div>

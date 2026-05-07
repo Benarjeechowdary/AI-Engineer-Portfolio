@@ -9,7 +9,7 @@
     "serve": "cross-env BASE_PATH=/ vite preview --config vite.config.ts --host 0.0.0.0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "predeploy": "pnpm build",
-  "deploy": "gh-pages -d dist"
+  "deploy": "gh-pages -d dist/public"
   },
   "devDependencies": {
     "@hookform/resolvers": "^3.10.0",

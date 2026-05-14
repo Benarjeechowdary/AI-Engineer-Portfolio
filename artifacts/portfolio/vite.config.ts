@@ -21,7 +21,7 @@ if (!basePath) {
 }
 
 export default defineConfig({
-  base: '/',
+  base: '/AI-Engineer-Portfolio/',
   plugins: [
     react(),
     tailwindcss(),

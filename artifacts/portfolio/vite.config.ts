@@ -21,7 +21,7 @@ if (!basePath) {
 }
 
 export default defineConfig({
-  base: '/AI-Engineer-Portfolio/',
+  base: '/',
   plugins: [
     react(),
     tailwindcss(),
@@ -49,7 +49,7 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
   },
   server: {
